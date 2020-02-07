@@ -9,8 +9,10 @@ class StoreMapPage extends StatefulWidget {
 class _StoreMapState extends State<StoreMapPage> {
   GoogleMapController mapController;
 
-  final LatLng _center = const LatLng(4.680031, -74.043106);
+  final LatLng _center = const LatLng(4.7555381, -74.0264781);
   final Set<Marker> _markers = {};
+  final String _storeName = 'Tienda';
+  final String _storeAddress = 'Avenida Falsa 123';
 
   void _onMapCreated(GoogleMapController controller) {
     mapController = controller;
@@ -18,9 +20,9 @@ class _StoreMapState extends State<StoreMapPage> {
 
   @override
   Widget build(BuildContext context) {
-    _markers.add(Marker(markerId: MarkerId('Peiky'),
+    _markers.add(Marker(markerId: MarkerId(_storeName),
         position: _center,
-        infoWindow: InfoWindow(title: 'Peiky', snippet: 'Calle 97A #9A-34')));
+        infoWindow: InfoWindow(title: _storeName, snippet: _storeAddress)));
     return Scaffold(
       appBar: AppBar(
         title: Text('Ubicación de tienda'),
