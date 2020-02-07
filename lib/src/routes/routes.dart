@@ -4,7 +4,7 @@ import 'package:components/src/pages/alert_page.dart';
 import 'package:components/src/pages/avatar_page.dart';
 import 'package:components/src/pages/home_page.dart';
 
-Map<String, WidgetBuilder> getApplicationRoute() {
+Map<String, WidgetBuilder> getApplicationRoutes() {
   return <String, WidgetBuilder>{
     "/home": (BuildContext context) => HomePage(),
     "alert": (BuildContext context) => AlertPage(),
